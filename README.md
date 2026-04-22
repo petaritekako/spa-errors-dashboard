@@ -1,15 +1,15 @@
 # spa-errors-dashboard
 SPA dashboard for displaying errors
 
-Title: Real-Time Error Insights Dashboard
+## Title: Real-Time Error Insights Dashboard
 
-Problem Context
+### Problem Context
 You are tasked with building a web app of a Real-Time Error Insights Dashboard for internal
 teams. The goal is to collect, store, and display frontend application error events (e.g.
 TypeScript exceptions, network failures) with filtering and visualization support. This version
 focuses only on error events, with real-time and analytics components.
 
-Requirements:
+### Requirements:
 Build a functional and well-architected MVP that:
 1. Simulates event ingestion (e.g. JSON-formatted error events)
 2. Stores raw events in MongoDB
@@ -18,11 +18,11 @@ Build a functional and well-architected MVP that:
 5. Caches expensive search queries using Redis
 6. Displays results in an Angular dashboard with filtering options
 
-Tech-stack:
-Backend: Node.js (TypeScript), MongoDB, Elasticsearch, Redis, Kafka
-Frontend: Angular (TypeScript)
+### Tech-stack:
+*Backend*: Node.js (TypeScript), MongoDB, Elasticsearch, Redis, Kafka
+*Frontend*: Angular (TypeScript)
 
-Backend Scope
+#### Backend Scope
 Build a TypeScript-based Node.js backend that:
 1. Ingests a batch of error events from a static JSON file or simulated Kafka
 (mocked/optional)
@@ -51,7 +51,7 @@ Build a TypeScript-based Node.js backend that:
 5. Uses Redis to cache the latest search and stats queries with TTL
 6. Includes basic unit tests (e.g. for indexing, query handling, Redis caching)
 
-Frontend Scope
+#### Frontend Scope
 Use Angular to build a simple frontend dashboard:
 1. List of error events sorted by timestamp that handles a large number of rows - Section
 "Errors"
@@ -61,15 +61,20 @@ Use Angular to build a simple frontend dashboard:
 Section “Widget(s)”
 5. Don't spend too much time on polished UI design
 
-Requirements Summary
+## Requirements Summary
 
-Area Requirement
-Event Storage MongoDB (raw events), Elasticsearch (indexed searchable format)
-Caching Redis (cache search and stats queries with TTL)
-API RESTful (filters + aggregations)
-Frontend Angular UI with filtering + simple visualization (chart.js, ngx-charts OK)
-Docs README
+Area                Requirement
 
-Expected Deliverables
+Event Storage       MongoDB (raw events), Elasticsearch (indexed searchable format)
+
+Caching             Redis (cache search and stats queries with TTL)
+
+API                 RESTful (filters + aggregations)
+
+Frontend            Angular UI with filtering + simple visualization (chart.js, ngx-charts OK)
+
+Docs                README
+
+### Expected Deliverables
 1. GitHub repo
 2. README
